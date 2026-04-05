@@ -1,4 +1,4 @@
-# Zoryab Finance Dashboard API
+# Zorvyn Finance Dashboard API
 
 This is the backend for a finance dashboard system
 
@@ -68,15 +68,19 @@ Once the server is running, visit:
 Below are screenshots of the API documentation (Swagger UI) showcasing the different feature areas:
 
 ### 1. Authentication & User Management
+
 ![Authentication & Users](docs/screenshots/01_auth_and_users.png)
 
 ### 2. Financial Records
+
 ![Financial Records](docs/screenshots/02_financial_records.png)
 
 ### 3. Dashboard Analytics
+
 ![Dashboard Analytics](docs/screenshots/03_dashboard_analytics.png)
 
 ### 4. API Schemas
+
 ![API Schemas](docs/screenshots/04_api_schemas.png)
 
 ## Running Tests
