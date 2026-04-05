@@ -27,25 +27,22 @@ def seed_database():
         print(" Creating users...")
 
         admin = User(
-            name="Admin User",
+            name="Harsh Singh",
             email="admin@example.com",
             hashed_password=hash_password("admin123"),
             role=Role.ADMIN,
-            is_active=True,
         )
         analyst = User(
-            name="Analyst User",
+            name="Analyst Team",
             email="analyst@example.com",
             hashed_password=hash_password("analyst123"),
             role=Role.ANALYST,
-            is_active=True,
         )
         viewer = User(
-            name="Viewer User",
+            name="Viewer Account",
             email="viewer@example.com",
             hashed_password=hash_password("viewer123"),
             role=Role.VIEWER,
-            is_active=True,
         )
 
         db.add_all([admin, analyst, viewer])
@@ -55,92 +52,91 @@ def seed_database():
 
         records = [
             FinancialRecord(
-                amount=5000.00,
+                amount=5000.0,
                 type=RecordType.INCOME,
                 category="Salary",
                 date=date(2024, 1, 15),
-                description="January salary",
+                description="Salary - Jan",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=5000.00,
+                amount=5000.0,
                 type=RecordType.INCOME,
                 category="Salary",
                 date=date(2024, 2, 15),
-                description="February salary",
+                description="Monthly payout (Feb)",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=5200.00,
+                amount=5250.0,
                 type=RecordType.INCOME,
                 category="Salary",
                 date=date(2024, 3, 15),
-                description="March salary with bonus",
+                description="Base salary + Bonus",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=5000.00,
+                amount=5000.0,
                 type=RecordType.INCOME,
                 category="Salary",
                 date=date(2024, 4, 15),
-                description="April salary",
+                description="Apr Monthly Salary",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=5000.00,
+                amount=5000.0,
                 type=RecordType.INCOME,
                 category="Salary",
                 date=date(2024, 5, 15),
-                description="May salary",
+                description="Salary - May",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=1200.00,
+                amount=1200.0,
                 type=RecordType.INCOME,
                 category="Freelance",
                 date=date(2024, 2, 20),
-                description="Web development project",
+                description="Web dev project P1",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=800.00,
+                amount=850.0,
                 type=RecordType.INCOME,
                 category="Freelance",
                 date=date(2024, 4, 10),
-                description="Logo design project",
+                description="Logo design - Client G",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=500.00,
+                amount=500.0,
                 type=RecordType.INCOME,
                 category="Investment",
                 date=date(2024, 3, 1),
-                description="Dividend payment",
+                description="Stock dividend",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=350.00,
+                amount=350.0,
                 type=RecordType.INCOME,
                 category="Investment",
                 date=date(2024, 5, 1),
-                description="Interest on savings",
+                description="Savings interest",
                 created_by_id=admin.id,
             ),
-            # Expense records
             FinancialRecord(
-                amount=1500.00,
+                amount=1500.0,
                 type=RecordType.EXPENSE,
                 category="Rent",
                 date=date(2024, 1, 1),
-                description="Monthly rent payment",
+                description="Apartment Rent - Jan",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=1500.00,
+                amount=1500.0,
                 type=RecordType.EXPENSE,
                 category="Rent",
                 date=date(2024, 2, 1),
-                description="Monthly rent payment",
+                description="Feb Rent payment",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
@@ -148,71 +144,71 @@ def seed_database():
                 type=RecordType.EXPENSE,
                 category="Rent",
                 date=date(2024, 3, 1),
-                description="Monthly rent payment",
+                description="Rent - March",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=1500.00,
+                amount=1500.0,
                 type=RecordType.EXPENSE,
                 category="Rent",
                 date=date(2024, 4, 1),
-                description="Monthly rent payment",
+                description="Apr Monthly Rent",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=1500.00,
+                amount=1500.0,
                 type=RecordType.EXPENSE,
                 category="Rent",
                 date=date(2024, 5, 1),
-                description="Monthly rent payment",
+                description="Rent payment (May)",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=450.00,
+                amount=450.0,
                 type=RecordType.EXPENSE,
                 category="Groceries",
                 date=date(2024, 1, 10),
-                description="Monthly groceries",
+                description="Store run - Jan",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=380.00,
+                amount=385.0,
                 type=RecordType.EXPENSE,
                 category="Groceries",
                 date=date(2024, 2, 8),
-                description="Monthly groceries",
+                description="Weekly Groceries",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=120.00,
+                amount=120.0,
                 type=RecordType.EXPENSE,
                 category="Utilities",
                 date=date(2024, 1, 20),
-                description="Electricity bill",
+                description="Electricity Bill",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=85.00,
+                amount=85.0,
                 type=RecordType.EXPENSE,
                 category="Utilities",
                 date=date(2024, 2, 20),
-                description="Internet bill",
+                description="Airtel Broadband",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=200.00,
+                amount=200.0,
                 type=RecordType.EXPENSE,
                 category="Transportation",
                 date=date(2024, 3, 15),
-                description="Monthly transit pass",
+                description="Fuel & Tolls",
                 created_by_id=admin.id,
             ),
             FinancialRecord(
-                amount=75.00,
+                amount=75.0,
                 type=RecordType.EXPENSE,
                 category="Entertainment",
                 date=date(2024, 4, 20),
-                description="Streaming subscriptions",
+                description="Netflix / Hotstar",
                 created_by_id=admin.id,
             ),
         ]
@@ -220,20 +216,14 @@ def seed_database():
         db.add_all(records)
         db.commit()
 
-        print()
-        print("✅ Database seeded successfully!")
-        print()
-        print("╔══════════════════════════════════════════════════════════════╗")
-        print("║                    Default User Accounts                    ║")
-        print("╠══════════════════════════╦═══════════════╦══════════════════╣")
-        print("║ Email                    ║ Password      ║ Role             ║")
-        print("╠══════════════════════════╬═══════════════╬══════════════════╣")
-        print("║ admin@example.com        ║ admin123      ║ ADMIN            ║")
-        print("║ analyst@example.com      ║ analyst123    ║ ANALYST          ║")
-        print("║ viewer@example.com       ║ viewer123     ║ VIEWER           ║")
-        print("╚══════════════════════════╩═══════════════╩══════════════════╝")
-        print()
-        print(f" Created {len(records)} financial records.")
+        print("\nSeed completed successfully!")
+        print("-" * 30)
+        print("Test Accounts Created:")
+        print("Admin:   admin@example.com / admin123")
+        print("Analyst: analyst@example.com / analyst123")
+        print("Viewer:  viewer@example.com / viewer123")
+        print("-" * 30)
+        print(f"Added {len(records)} records to the database.")
 
     except Exception as e:
         db.rollback()
